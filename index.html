@@ -332,7 +332,7 @@
 
 	<![endif]--> <div class="content-wrapper container-fluid parent">
     
-    <div class=slider> 
+    <div class="slider slider-desktop"> 
         <ul class="slider-items row owl-theme owl-carousel-lucio owl-carousel">
             
             <li class="col-md-4 item slider-img" style="background-image: url('images/first.c14877ed.jpg')"></li> 
@@ -341,6 +341,17 @@
             <li class="col-md-4 item slider-img" style="background-image: url('images/third.cff125eb.jpg')"></li>
             
             <li class="col-md-4 item slider-img visible-xs visible-sm" style="background-image: url('images/fourth.4bd10bb3.jpg')"></li> </ul>
+    
+    </div> 
+    <div class="slider slider-mobile" > 
+        <ul class="slider-items row owl-theme owl-carousel-lucio owl-carousel">
+            
+            <li class="col-md-4 item slider-img" style="background-image: url('images/one.jpg')"></li> 
+            
+            <li class="col-md-4 item slider-img" style="background-image: url('images/two.jpg')"></li>
+            <li class="col-md-4 item slider-img" style="background-image: url('images/three.jpg')"></li>
+            
+            <li class="col-md-4 item slider-img visible-xs visible-sm" style="background-image: url('images/four.jpg')"></li> </ul>
     
     </div> 
     
@@ -877,15 +888,22 @@
                 width: 576px;
             }
         }
+        @media screen and (min-width: 576px) {
+            .slider.slider-mobile{
+                display: none
+            }
+        }
         @media screen and (max-width: 576px) {
-        
+            .slider.slider-desktop{
+                display: none
+            }
             .modal-new-2 {
                 width: 480px;
                 top: 3%;
             }
 
             .content-new-modal{
-            height:450px
+                height: 250px;
             }
             .panel-group-new {
                 padding: 0 22%;
@@ -914,7 +932,7 @@
                 padding: 12px 12px;
             }
             .content-new-modal{
-            height:350px
+                height: 250px;
             }
             .panel-group-new {
                 width: 253px;
