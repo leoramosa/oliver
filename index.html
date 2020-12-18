@@ -1,6 +1,8 @@
-<!DOCTYPE html> <html class=no-js>
-    
+<!DOCTYPE html>
+ <html class=no-js  lang="en"> 
 <head>
+
+    <meta charset="UTF-8">
 
     <!--Start of Tawk.to Script-->
 <script type="text/javascript">
@@ -76,7 +78,7 @@
 	
 
 	
-    <meta charset=utf-8>
+    
      <title>Oliver</title> 
     <meta name=description content="Oliver">
      <meta name=viewport content="width=device-width,initial-scale=1"> 
@@ -329,7 +331,13 @@
                  
          
                  </style> 
-             <div id=loader-wrapper> <div class=loader>Cargando...</div> </div> <div class=lucio-caffe> <!--[if lt IE 10]>
+                 
+             <div id=loader-wrapper> 
+                 <div class=loader>Cargando...
+
+                 </div>
+                 </div>
+                  <div class=lucio-caffe> <!--[if lt IE 10]>
 
 	<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
 
@@ -564,13 +572,41 @@
 						
 							
 
+                    </div>
+             </div>
+            <div class="close-new-modal" id="close-btn-new-4">cerrar</div>
             </div>
         </div>
-        <div class="close-new-modal" id="close-btn-new-4">cerrar</div>
-    </div>
-		</div>
+
+        <div class="overlay-new-3" id="overlay-new-3">
+            <div class="modal-new-3" id="modal-new-3">
+                <div class="content-margin-modal">
+
+                
+                <button class="modal-close-btn-new-5" id="close-btn-new-5" ><span  title="close">x</span></button>
+               
+                <div class="content-new-modal-img">
+                    <div class="element-img-modal">
+                              <img src="images/img-mailing.png" alt="">
+                     </div>
+                     </div>
+                    <div class="close-new-modal-img" id="close-btn-new-6">
+                        <button>
+                            <a href="https://www.oliver.pe/promo-oliver.png" target="_blank">ver promociones</a>
+                            
+                        </button>
+                    </div>
+                </div>
+                    </div>
+                </div>
+
+        
+
+
+
 		
 		<script>
+
 
 			document.getElementById('btn-modal-new').addEventListener('click', function() {
 				document.getElementById('overlay-new').classList.add('is-visible');
@@ -610,11 +646,57 @@
 				document.getElementById('modal-new-2').classList.remove('is-visible-2');
 			});
 							</script>
+							<script>
+									
+			/* MODAL2 */
+			document.getElementById('close-btn-new-5').addEventListener('click', function() {
+				document.getElementById('overlay-new-3').classList.remove('overlay-new-3');
+				document.getElementById('modal-new-3').classList.add('cerrar-modal');
+			});
+		
+							</script>
    
     <!-- end agregando modals -->
 
     <!-- estilos para los nuevos modals -->
     <style>
+        .cerrar-modal{
+            display: none;
+        }
+
+        /* #close-btn-new-5:checked ~ .modal-new-3{
+            display: none
+        } */
+
+        .content-margin-modal{
+            margin: 11px;
+    background-color: #060503;
+    padding: 18px 0;
+    border: 2px solid;
+    border-radius: 8px;
+        }
+        
+        .close-new-modal-img{
+           text-align: center;
+            padding-top: 14px;  
+        }
+        .close-new-modal-img button{
+            background: #1a383e;
+    border: 0;
+    color: white;
+    padding: 6px 28px;
+    font-size: 19px;
+    border-radius: 41px;
+        }
+        .close-new-modal-img button a{
+         text-decoration: none;
+         color: white;
+        }
+        .element-img-modal img{
+            max-width: 463px;
+            width: 100%;
+        }
+
         .slider-img {
     border-left: none !important;
     border-right: none !important;
@@ -822,11 +904,47 @@
         transition: opacity 0.2s;
         z-index:75;
         }
+
+        .modal-new-3 {
+        max-width:462px;
+        width: 100%;
+        padding: 12px 0px;
+        position: relative;
+        top: 7rem;
+        color: #1a383e;
+        border-radius: 6px;
+        transition: opacity 0.2s;
+        z-index:80;
+        animation: modalani 1s;
+        animation-delay: 2s ;
+        animation-fill-mode: forwards ;
+        visibility: hidden;
+        opacity: 0;
+        }
+
+        @keyframes modalani {
+            100% {
+             visibility: visible;
+             opacity: 1;
+            }
+        }
+
+
         .modal-close-btn-new, .modal-close-btn-new-2 {
         position: absolute;
         right: 10px;
         top: 10px;
         font-size: 20px;
+        }
+
+        .modal-close-btn-new-5 {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            color: white;
+            background: #0d1c1f;
+            border-radius: 50%;
+            border: 2px solid white;
         }
 
         /** Overlay */
@@ -861,6 +979,21 @@
         opacity: 0;
         transition: 0.5s;
 				z-index: 70;
+        }
+
+        .overlay-new-3 {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: opacity 0.3s;
+        transition: 0.5s;
+				z-index: 75;
         }
 
         /** JS */
